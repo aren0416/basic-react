@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.kakao {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.kakao > li {
+  width: 30%;
+}
+
+.kakao > li > h1 {
+  margin-bottom: 5px;
+  line-height: 40px;
+  font-size: 24px;
+  color: #333;
+}
+
+.kakao > li > p {
+  font-size: 15px;
+  line-height: 22px;
+  color: #666;
+}
