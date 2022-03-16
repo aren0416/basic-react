@@ -8,16 +8,23 @@ ul {
 
 .kakao {
   padding: 50px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 50px;
 }
 
 .kakao > li {
-  width: 30%;
+  width: 100%;
+}
+
+.kakao > li > div,
+.kakao > li > div > img {
+  width: 100%;
 }
 
 .kakao > li > h1 {
-  margin-bottom: 5px;
+  margin: 5px 0;
   line-height: 40px;
   font-size: 24px;
   color: #333;
