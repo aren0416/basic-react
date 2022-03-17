@@ -8,6 +8,7 @@ const Wrap = styled.div`
 const Bg = styled.div`
   height: 400px;
   background-color: gray;
+  background: url(${(props) => props.img}) no-repeat center / cover;
 `;
 const Title = styled.h3`
   font-size: ${(props) => props.fontSize};
@@ -50,7 +51,17 @@ export const BasicStyle = () => {
   return (
     <>
       <Wrap>
-        <Bg />
+        {/* <Bg
+          style={{
+            background:
+              "url(https://wonism.github.io/static/js-401cd01e8522c5d16b93f7a237b81943.jpg) no-repeat center / cover",
+          }}
+        /> */}
+        <Bg
+          img={
+            "https://wonism.github.io/static/js-401cd01e8522c5d16b93f7a237b81943.jpg"
+          }
+        />
         <Title
           fontSize={mainSize}
           fontColor={mainColor}
