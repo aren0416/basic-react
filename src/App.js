@@ -4,8 +4,10 @@
 // import { menus } from "./db";
 // import { kakaoDb } from "./db";
 
-import { BasicStyle } from "./components/BasicStyle";
 import { GlobalStyle } from "./styles/GlobalStyle";
+// import { BasicStyle } from "./components/BasicStyle";
+import { ThreeLang } from "./components/ThreeLang";
+import { language } from "./db";
 
 const App = () => {
   return (
@@ -15,7 +17,8 @@ const App = () => {
       <Kakao kakaos={kakaoDb} /> */}
       {/* 3일차 끝 */}
       <GlobalStyle />
-      <BasicStyle />
+      {/* <BasicStyle /> */}
+      <ThreeLang threeLang={language} />
     </div>
   );
 };
