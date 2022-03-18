@@ -40,36 +40,84 @@
 //   );
 // };
 
+// import { useState } from "react";
+// import styled from "styled-components";
+
+// const Box = styled.div`
+//   width: 300px;
+//   height: 300px;
+//   background-color: ${(props) => props.backColor};
+//   color: white;
+// `;
+
+// export const Event = () => {
+//   const [color, setColor] = useState("gold");
+
+//   const [num, setNum] = useState(0);
+
+//   const onClickBox = () => {
+//     if (num === 0) {
+//       setColor("mediumslateblue");
+//       setNum(num + 1);
+//     } else if (num === 1) {
+//       setColor("gold");
+//       setNum(num - 1);
+//     }
+//     console.log(num);
+//   };
+
+//   return (
+//     <Box backColor={color} onClick={onClickBox}>
+//       <h3>클릭해주세요</h3>
+//     </Box>
+//   );
+// };
+
 import { useState } from "react";
 import styled from "styled-components";
 
 const Box = styled.div`
   width: 300px;
   height: 300px;
-  background-color: ${(props) => props.backColor};
+  background-color: slateblue;
   color: white;
 `;
 
+const PopBox = styled.div`
+  width: 400px;
+  height: 400px;
+  background-color: lightgray;
+  margin: 100px auto;
+  display: ${(props) => props.boxDisplayBlock};
+`;
+
+const Close = styled.h4`
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #f8f8f8;
+`;
+
 export const Event = () => {
-  const [color, setColor] = useState("gold");
+  const [displayBlock, setDisplayBlock] = useState("none");
 
-  const [num, setNum] = useState(0);
+  const onBoxClick = () => {
+    setDisplayBlock("block");
+  };
 
-  const onClickBox = () => {
-    // setColor("salmon");
-    if (num === 0) {
-      setColor("mediumslateblue");
-      setNum(num + 1);
-    } else if (num === 1) {
-      setColor("gold");
-      setNum(num - 1);
-    }
-    console.log(num);
+  const onCloseClick = () => {
+    setDisplayBlock("none");
   };
 
   return (
-    <Box backColor={color} onClick={onClickBox}>
-      <h3>클릭해주세요</h3>
-    </Box>
+    <>
+      <Box onClick={onBoxClick}>
+        <h3>클릭해주세요</h3>
+      </Box>
+
+      <PopBox boxDisplayBlock={displayBlock}>
+        <Close onClick={onCloseClick}>X</Close>
+      </PopBox>
+    </>
   );
 };
