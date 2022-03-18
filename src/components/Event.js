@@ -22,20 +22,54 @@
 //   );
 // };
 
+// import { useState } from "react";
+
+// export const Event = () => {
+//   const [like, setLike] = useState(0);
+//   const [heart, setHeart] = useState("♡");
+
+//   const onClickHeart = () => {
+//     setLike(like + 1);
+//     setHeart("♥︎");
+//   };
+
+//   return (
+//     <div>
+//       <span onClick={onClickHeart}>{heart}</span>좋아요 <span>{like}</span>
+//     </div>
+//   );
+// };
+
 import { useState } from "react";
+import styled from "styled-components";
+
+const Box = styled.div`
+  width: 300px;
+  height: 300px;
+  background-color: ${(props) => props.backColor};
+  color: white;
+`;
 
 export const Event = () => {
-  const [like, setLike] = useState(0);
-  const [heart, setHeart] = useState("♡");
+  const [color, setColor] = useState("gold");
 
-  const onClickHeart = () => {
-    setLike(like + 1);
-    setHeart("♥︎");
+  const [num, setNum] = useState(0);
+
+  const onClickBox = () => {
+    // setColor("salmon");
+    if (num === 0) {
+      setColor("mediumslateblue");
+      setNum(num + 1);
+    } else if (num === 1) {
+      setColor("gold");
+      setNum(num - 1);
+    }
+    console.log(num);
   };
 
   return (
-    <div>
-      <span onClick={onClickHeart}>{heart}</span>좋아요 <span>{like}</span>
-    </div>
+    <Box backColor={color} onClick={onClickBox}>
+      <h3>클릭해주세요</h3>
+    </Box>
   );
 };
