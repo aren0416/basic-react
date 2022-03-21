@@ -8,7 +8,8 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 // import { BasicStyle } from "./components/BasicStyle";
 // import { ThreeLang } from "./components/ThreeLang";
 // import { language } from "./db";
-import { Event } from "./components/Event";
+// import { Event } from "./components/Event";
+import { WeRouter } from "./WeRouter";
 
 const App = () => {
   return (
@@ -21,7 +22,9 @@ const App = () => {
       {/* <BasicStyle /> */}
       {/* <ThreeLang threeLang={language} /> */}
       {/* 4일차 끝 */}
-      <Event />
+      {/* <Event /> */}
+      {/* 5일차 끝 */}
+      <WeRouter />
     </div>
   );
 };
