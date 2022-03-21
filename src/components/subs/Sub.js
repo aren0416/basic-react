@@ -41,22 +41,16 @@ const P = styled.p`
   font-weight: 300;
 `;
 
-export const Sub = () => {
+export const Sub = ({ img, title, desc }) => {
   return (
     <Wrap>
       <Container>
         <ImgCon>
-          <img src="https://yt3.ggpht.com/LQFf-dk_iKNQpammhtOxRuS67QJhsWaEyg0OyFE5UD7PcatFaOzR6q23NnGkSbeMm0kYPeTD5w=s900-c-k-c0x00ffffff-no-rj" />
+          <img src={img} />
         </ImgCon>
         <Con>
-          <Title>서브페이지2</Title>
-          <P>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic
-          </P>
+          <Title>{title}</Title>
+          <P>{desc}</P>
         </Con>
       </Container>
     </Wrap>

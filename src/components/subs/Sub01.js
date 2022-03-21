@@ -1,69 +1,18 @@
-import styled from "styled-components";
+import { jjanguDb } from "../../db";
 import { PageTitle } from "../PageTitle";
+import { Sub } from "./Sub";
 
-const Wrap = styled.div`
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Container = styled.div`
-  width: 1000px;
-  display: flex;
-  justify-content: space-between;
-`;
-
-const ImgCon = styled.div`
-  width: 40%;
-  height: 400px;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-const Con = styled.div`
-  width: 55%;
-  padding: 40px 0;
-`;
-
-const Title = styled.h3`
-  font-size: 40px;
-  margin-bottom: 20px;
-  font-weight: 500;
-  color: #1d1d1d;
-`;
-
-const P = styled.p`
-  font-size: 15px;
-  line-height: 24px;
-  color: #808080;
-  font-weight: 300;
-`;
+console.log(jjanguDb[0]);
 
 export const Sub01 = () => {
   return (
     <div>
       <PageTitle title={"Sub01"} />
-      <Wrap>
-        <Container>
-          <ImgCon>
-            <img src="https://img.insight.co.kr/static/2020/09/22/700/97so3hz72p4nq982if5l.jpg" />
-          </ImgCon>
-          <Con>
-            <Title>서브페이지1</Title>
-            <P>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic
-            </P>
-          </Con>
-        </Container>
-      </Wrap>
+      <Sub
+        img={jjanguDb[0].img}
+        title={jjanguDb[0].title}
+        desc={jjanguDb[0].desc}
+      />
     </div>
   );
 };

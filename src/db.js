@@ -136,3 +136,28 @@ export const language = [
     ),
   },
 ];
+
+export const jjanguDb = [
+  {
+    id: 0,
+    img: "https://img.insight.co.kr/static/2020/09/22/700/97so3hz72p4nq982if5l.jpg",
+    title: "서브페이지01",
+    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting
+    industry. Lorem Ipsum has been the industry's standard dummy text
+    ever since the 1500s, when an unknown printer took a galley of
+    type and scrambled it to make a type specimen book. It has
+    survived not only five centuries, but also the leap into
+    electronic`,
+  },
+  {
+    id: 1,
+    img: "https://yt3.ggpht.com/LQFf-dk_iKNQpammhtOxRuS67QJhsWaEyg0OyFE5UD7PcatFaOzR6q23NnGkSbeMm0kYPeTD5w=s900-c-k-c0x00ffffff-no-rj",
+    title: "서브페이지02",
+    desc: `Lorem Ipsum is simply dummy text of the printing and typesetting
+    industry. Lorem Ipsum has been the industry's standard dummy text
+    ever since the 1500s, when an unknown printer took a galley of
+    type and scrambled it to make a type specimen book. It has
+    survived not only five centuries, but also the leap into
+    electronic`,
+  },
+];
