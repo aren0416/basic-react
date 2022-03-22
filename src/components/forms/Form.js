@@ -1,12 +1,15 @@
 import { useForm } from "react-hook-form";
 import { Wrap, SForm, Title, Input, Button, Msg } from "../../styles/FormStyle";
 import { userDB } from "../../db";
+import { useNavigate } from "react-router-dom";
 
 let idErrorMsg;
 let pwdErrorMsg;
 // => 입력한 아이디비번과 db에 저장된내용 비교해서 출력하기 위해 빈 변수 만듬
 
 export const Form = () => {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -38,6 +41,7 @@ export const Form = () => {
     //console.log(idErrorMsg, pwdErrorMsg);
 
     alert("로그인이 되었습니다");
+    navigate("/home");
   };
 
   //   console.log(watch());

@@ -29,7 +29,7 @@ const App = () => {
       {/* <WeRouter /> */}
       {/* 6일차 끝 */}
       <WeRouter />
-      <Form />
+      {/* <Form /> */}
     </div>
   );
 };
