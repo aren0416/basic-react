@@ -9,6 +9,8 @@ import { GlobalStyle } from "./styles/GlobalStyle";
 // import { ThreeLang } from "./components/ThreeLang";
 // import { language } from "./db";
 // import { Event } from "./components/Event";
+// import { WeRouter } from "./WeRouter";
+import { Form } from "./components/forms/Form";
 import { WeRouter } from "./WeRouter";
 
 const App = () => {
@@ -24,7 +26,10 @@ const App = () => {
       {/* 4일차 끝 */}
       {/* <Event /> */}
       {/* 5일차 끝 */}
+      {/* <WeRouter /> */}
+      {/* 6일차 끝 */}
       <WeRouter />
+      <Form />
     </div>
   );
 };

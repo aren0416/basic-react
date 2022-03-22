@@ -161,3 +161,8 @@ export const jjanguDb = [
     electronic`,
   },
 ];
+
+export const userDB = {
+  userId: "pncoding",
+  password: "123123123",
+};

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Form } from "./components/forms/Form";
 import { Header } from "./components/Header";
 import { Home } from "./components/home/Home";
 import { PageNotFound } from "./components/PageNotFound";
@@ -11,6 +12,7 @@ export const WeRouter = () => {
     <Router>
       <Header />
       <Routes>
+        <Route path={routes.login} element={<Form />} />
         <Route path={routes.home} element={<Home />} />
         <Route path={routes.sub01} element={<Sub01 />} />
         <Route path={routes.sub02} element={<Sub02 />} />
